@@ -20,8 +20,8 @@ class CurrencyConverter: # Create clas
         lblConvertedAmount = Label(window, font='Helvetica 12 bold', bg='yellow', textvariable = self.convertedAmountVar, justify = RIGHT).grid(row=3, column=2, sticky=E)
 
         # Create convert and clear buttons. When clicked they will call their respective functions.
-        btConvertedAmount = Button(window, text = 'Convert', font='Helvetica 12 bold', bg='blue', fg='white', command = self.ConvertedAmount).grid(row=4, column=2, sticky=E)
-        btdelete_all = Button(window, text = 'Clear', font='Helvetica 12 bold', bg='red', fg='white', command = self.delete_all).grid(row=4, column=6, padx=25, pady=25, sticky=E)
+        btConvertedAmount = Button(window, text = 'Convert', font='Helvetica 12 bold', highlightbackground='blue',fg='black', command = self.ConvertedAmount).grid(row=4, column=2, sticky=E)
+        btdelete_all = Button(window, text = 'Clear', font='Helvetica 12 bold', highlightbackground="red",fg='black', command = self.delete_all).grid(row=4, column=6, padx=25, pady=25, sticky=E)
 
         window.mainloop()
 
@@ -38,6 +38,7 @@ class CurrencyConverter: # Create clas
         self.convertedAmountVar.set('')
 
 CurrencyConverter()
+
 
 
 
